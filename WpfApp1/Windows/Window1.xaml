@@ -24,7 +24,8 @@
         <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Имя" Grid.Row="1"  Grid.Column="0" x:Name="name" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160"></TextBox>
         <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Номер телефона" Grid.Row="1" Grid.Column="1" x:Name="phone" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160" ></TextBox>
         <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Возраст" Grid.Row="1" Grid.Column="2" x:Name="years" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160"></TextBox>
+        <TextBox IsEnabled="False" Grid.Row="3" x:Name="ObjectsCount" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160" Margin="165,4,165,3" TextWrapping="Wrap" TextAlignment="Center" Text="Количество объектов: 0" Grid.ColumnSpan="3"/>
         <Button Background="Pink" Foreground="Black"  Grid.Row="3" Grid.Column="0" x:Name="add" Click="add_Click" Height="50" Width="160" FontSize="30">Добавить</Button>
-        <Button Background="Pink" Foreground="Black" Grid.Row="3" Grid.Column="2" x:Name="save" Click="save_Click" Height="50" Width="160"  FontSize="30">Сохранить</Button>
+        <Button Background="Pink" Foreground="Black" Grid.Row="3" Grid.Column="2" x:Name="save" Click="save_Click" Height="50" Width="160"  FontSize="30" HorizontalAlignment="Center">Сохранить</Button>
     </Grid>
 </Window>

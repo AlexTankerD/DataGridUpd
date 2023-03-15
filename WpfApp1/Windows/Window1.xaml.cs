@@ -44,6 +44,8 @@ namespace WpfApp1.Windows
                 Age = years.Text,
                 ID = ID,
             };
+            
+            ObjectsCount.Text = $"Количество объектов: {ID}";
             ID += 1;
             IData.Add(teacher);
         }
