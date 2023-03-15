@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1.Windows"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="Window1" Height="300" Width="500">
+        Title="Window1" Height="300" Width="500" ResizeMode="NoResize">
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,9 +21,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox TextBoxBase.SelectionChanged="name_SelectionChanged" Grid.Row="1" Grid.Column="0" x:Name="name" Background="Pink" Foreground="Black" FontSize="20" Height="50" Width="160"> Имя</TextBox>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="phone" Background="Pink" Foreground="Black" FontSize="20" Height="50" Width="160" >Номер телефона</TextBox>
-        <TextBox Grid.Row="1" Grid.Column="2" x:Name="years" Background="Pink" Foreground="Black" FontSize="20" Height="50" Width="160">Возраст</TextBox>
+        <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Имя" Grid.Row="1"  Grid.Column="0" x:Name="name" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160"></TextBox>
+        <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Номер телефона" Grid.Row="1" Grid.Column="1" x:Name="phone" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160" ></TextBox>
+        <TextBox ui:ControlHelper.PlaceholderForeground="Black" ui:ControlHelper.PlaceholderText="Возраст" Grid.Row="1" Grid.Column="2" x:Name="years" Background="Pink" Foreground="Black" FontSize="15" Height="50" Width="160"></TextBox>
         <Button Background="Pink" Foreground="Black"  Grid.Row="3" Grid.Column="0" x:Name="add" Click="add_Click" Height="50" Width="160" FontSize="30">Добавить</Button>
         <Button Background="Pink" Foreground="Black" Grid.Row="3" Grid.Column="2" x:Name="save" Click="save_Click" Height="50" Width="160"  FontSize="30">Сохранить</Button>
     </Grid>

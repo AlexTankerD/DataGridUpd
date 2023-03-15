@@ -4,17 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="MainWindow" Height="620" Width="550">
+        Title="MainWindow" Height="820" Width="550"
+        ResizeMode="NoResize">
     <Grid>
-        <Menu Background="Black" Foreground="Pink">
-            <MenuItem x:Name="OpenJson" Width="87" Height="20" Header="Открыть JSON" Click="add_Click"></MenuItem>
-            <MenuItem x:Name="OpenWindow" Header="Открыть окно" Click="openwindow_Click"></MenuItem>
-            <MenuItem x:Name="DeleteItems" Header="Удалить все объекты" Click="DeleteItems_Click"></MenuItem>
+        <Menu Background="Black" VerticalAlignment="Top" >
+            <MenuItem Foreground="Pink" x:Name="OpenJson" Width="115" Header="Открыть JSON" Click="add_Click"></MenuItem>
+            <MenuItem Foreground="Pink" x:Name="OpenWindow" Header="Открыть окно" Width="115" Click="openwindow_Click"></MenuItem>
+            <MenuItem Foreground="Pink" x:Name="DeleteItems" Header="Удалить все объекты"  Click="DeleteItems_Click"></MenuItem>
         </Menu>
-        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,19,0,0" Background="Black">
-            <DataGrid KeyDown="datagrid_KeyDown" Background="Black" x:Name="datagrid" IsReadOnly="True" AutoGenerateColumns="False" Height="605" >
+        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,40,0,0" Background="Black">
+            <DataGrid KeyDown="datagrid_KeyDown" Background="Black" x:Name="datagrid" IsReadOnly="True" AutoGenerateColumns="False" Height="810" >
                 <DataGrid.Columns>
+                    <DataGridTextColumn Width="38" Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
                     <DataGridTextColumn Width="133" Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
                     <DataGridTextColumn Width="133" Header="Телефон" Binding="{Binding phonenumber}"></DataGridTextColumn>
                     <DataGridTextColumn Width="133" Header="Возраст" Binding="{Binding Age}"></DataGridTextColumn>

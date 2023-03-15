@@ -27,7 +27,7 @@ namespace WpfApp1.Windows
     {
         public ObservableCollection<Teacher> IData = new ObservableCollection<Teacher>();
 
-        Guid Guid = Guid.NewGuid();
+        public int ID = 1;
 
         public Window1()
         {
@@ -41,13 +41,11 @@ namespace WpfApp1.Windows
             {
                 Name = name.Text,
                 phonenumber = phone.Text,
-                Age = years.Text
+                Age = years.Text,
+                ID = ID,
             };
-            
+            ID += 1;
             IData.Add(teacher);
-            
-            
-            
         }
 
 
@@ -63,11 +61,9 @@ namespace WpfApp1.Windows
             if (string.IsNullOrEmpty(saveFileDialog.FileName))
                 return;
             File.WriteAllText(saveFileDialog.FileName, json);
+            this.Close();
+
         }
 
-        private void name_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            name.Text = "Имя";
-        }
     }
 }
